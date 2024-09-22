@@ -158,6 +158,9 @@
         padding: 20px 0;
         border-top: 1px;
         font-family: "Playpen Sans", cursive;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
     .copy {
