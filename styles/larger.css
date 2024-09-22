@@ -1,0 +1,177 @@
+@media (min-width: 648px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        background: #f6bc8c;
+        padding: 0;
+        color: #173826;
+        height: 160px;
+        font-family: "Playpen Sans", cursive;
+
+    }
+
+    header img {
+        width: 100px;
+        height: 130px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px;
+    }
+
+    .header_1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header_0 div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        margin: 0;
+    }
+
+
+    nav {
+        background-color: #f2e5d3;
+        font-size: 2rem;
+        font-family: "Playpen Sans", cursive;
+        padding: 0.2rem;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a {
+
+        color: #173826;
+        text-align: center;
+        padding: 0.5rem;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid #173826;
+    }
+
+    nav .active {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        text-align: center;
+        text-decoration: underline;
+        padding-top: 2rem;
+        font-size: 1rem;
+        color: #173826;
+        font-family: "Playpen Sans", cursive;
+    }
+
+    .main_grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .card {
+        margin: 1rem;
+        border: 1px solid #000;
+        border-radius: 15px;
+        overflow: hidden;
+        color: #173826;
+        box-shadow: 1px 1px 10px;
+        min-height: 220px;
+    }
+
+    .card-header {
+        background: #e07d45;
+        text-align: center;
+        font-family: "Playpen Sans", cursive;
+    }
+
+    .card-body {
+        padding: 1rem;
+        font-family: "PT Serif", serif;
+    }
+
+    .card-body ul li {
+        list-style: none;
+    }
+
+
+    .card-body ul li a:after {
+        content: " | ";
+        color: #000;
+        font-weight: 600;
+    }
+
+    .card-body ul li a:last-child:after {
+        content: "";
+    }
+
+    .city,
+    .weather {
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .weather img {
+        width: 40px;
+        height: auto;
+
+    }
+
+    .weather {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #temp {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .card-body div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    #visits {
+        text-align: center;
+    }
+
+    footer {
+        background-color: #f6bc8c;
+        color: #173826;
+        padding: 20px 0;
+        border-top: 1px;
+        font-family: "Playpen Sans", cursive;
+    }
+
+    .copy {
+        display: flex;
+        justify-content: center;
+    }
+
+    .copy p {
+        margin-right: 10px;
+        display: block;
+    }
+
+    .lastM {
+        text-align: center;
+    }
+
+}
