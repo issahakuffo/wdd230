@@ -67,6 +67,10 @@
         background-color: rgba(157, 163, 121, 0.3);
     }
 
+    nav #Menu_button {
+        display: none;
+    }
+
     h1 {
         text-align: center;
         text-decoration: underline;
