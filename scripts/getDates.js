@@ -24,3 +24,19 @@ menu_button.addEventListener("click", function () {
         menu_button.innerHTML = '<i class="fa fa-bars"></i>';
     }
 })
+
+const mode_switcher = document.querySelector("#Mode_switcher");
+const html = document.querySelector("html");
+const mode_type = document.querySelector("#mode_type");
+
+mode_switcher.addEventListener("click", function () {
+
+    if (mode_switcher.checked) {
+        // alert('yes checked');
+        html.className = 'dark';
+        mode_type.innerHTML = 'Dark';
+    } else {
+        html.className = '';
+        mode_type.innerHTML = 'Light';
+    }
+})
