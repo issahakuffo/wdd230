@@ -95,6 +95,10 @@ nav #Menu {
     animation: fadeIn 10s forwards;
 }
 
+.hero img {
+    max-width: 100%;
+}
+
 h1 {
     text-align: center;
     text-decoration: underline;
