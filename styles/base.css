@@ -15,8 +15,10 @@ header {
 header img {
     width: 100px;
     height: 130px;
-
+    opacity: 0;
+    animation: fadeIn 10s forwards;
 }
+
 
 .header_0 div {
     display: flex;
@@ -88,6 +90,11 @@ nav #Menu {
     display: block;
 }
 
+.images {
+    opacity: 0;
+    animation: fadeIn 10s forwards;
+}
+
 h1 {
     text-align: center;
     text-decoration: underline;
@@ -95,6 +102,11 @@ h1 {
     font-size: 1rem;
     color: #173826;
     font-family: "Playpen Sans", cursive;
+}
+
+.visit-label {
+    font-weight: 700;
+    font-family: "PT Serif", serif;
 }
 
 .card {
@@ -163,6 +175,23 @@ h1 {
 
 #visits {
     text-align: center;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Lazy loading fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 footer {

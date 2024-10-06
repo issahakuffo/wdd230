@@ -31,7 +31,7 @@
 <body>
     <header class="header_0">
         <div class="header_1">
-            <img src="images/issah_profile.jpg" alt="issah profile picture" width="100" height="130">
+            <img src="images/issah_profile.webp" alt="issah profile picture" width="100" height="130">
             <div class="author_name">
                 <h2>Issah Akuffo</h2>
             </div>
@@ -54,6 +54,16 @@
         <p><span id="mode_type">Light</span> mode selected</p>
     </div>
     <main>
+        <div class="hero">
+            <picture class="images">
+                <source srcset="images/small-temple.webp" media="(max-width: 400px)" loading="lazy">
+                <source srcset="images/large-temple.webp" media="(max-width: 960px)" loading="lazy">
+                <img src="images/large-temple.webp" alt="temple" loading="lazy">
+            </picture>
+            <div class="label">
+                <p>Accra Temple </p>
+            </div>
+        </div>
         <h1>WDD 230: Web Frontend Development</h1>
         <div class="main_grid">
             <section>
@@ -70,7 +80,9 @@
                                     <a href="#">Normalize CSS</a></li>
                             <li>week 3:<a href="images/landscape.webp">WebP</a>
                                 <a href="https://issahakuffo.github.io/wdd230/week03/lazyload.html">Lazyload</a>
-                                <a href="https://issahakuffo.github.io/wdd230/week03/responsive-image.html">Responsive image</a>
+                                <a href="https://issahakuffo.github.io/wdd230/week03/responsive-image.html">Responsive
+                                    image</a>
+                                <a href="https://issahakuffo.github.io/wdd230/week03/bom.html">Web Storage API</a>
                             </li>
                             <li>Week 4:</li>
                             <li>Week 5:</li>
@@ -88,7 +100,7 @@
                     <div class="card-body">
                         <p class="city">Accra, Ghana</p>
                         <div class="weather">
-                            <img src="images/sunny-weather.png" id="weather-icon" alt="sunny weather icon">
+                            <img src="images/sunny-weather.webp" id="weather-icon" alt="sunny weather icon">
                             <p id="temp">75°F - Sunshine</p>
                         </div>
                         <p id="visits">Page Visits : 15</p>
@@ -96,7 +108,22 @@
                 </div>
             </section>
         </div>
+        <p><span class="visit-label">Number of Visits: </span>
+            <span class="visits"></span>
+        </p>
     </main>
+    <div class="map-container">
+        <iframe
+            src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.99590277703!2d-0.19625752525486204!3d5.567620894412904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a7bc5614509%3A0x956877901c6604e1!2sAccra%20Ghana%20Temple!5e0!3m2!1sen!2sgh!4v1728228701140!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    
     <footer>
         <div class="copy">
             <p>&copy;

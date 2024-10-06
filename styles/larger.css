@@ -71,6 +71,40 @@
         display: none;
     }
 
+    .hero {
+        margin: 10px auto;
+        position: relative;
+        border: 1px solid #173826;
+        ;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .label {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        background: radial-gradient(#fff, #5583cc);
+        border: 1px solid #173826;
+        border-radius: 25px;
+        padding: 1.5rem;
+        box-shadow: 0 0 3rem #fff;
+        opacity: 0.75;
+    }
+
+    .label p {
+        font-family: "Playpen Sans", cursive;
+        font-size: 1rem;
+        color: #173826;
+        font-weight: bold;
+        padding: .25rem;
+        margin: 0;
+    }
+
     input.mode_switcher {
         position: relative;
         -webkit-appearance: none;
@@ -196,7 +230,6 @@
         padding: 20px 0;
         border-top: 1px;
         font-family: "Playpen Sans", cursive;
-        position: absolute;
         bottom: 0;
         width: 100%;
     }
