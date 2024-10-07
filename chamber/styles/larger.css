@@ -1,0 +1,37 @@
+/* Larger Screens */
+@media (min-width: 768px) {
+    nav .menu {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .spotlights {
+        /* display: flex; */
+        /* justify-content: space-between; */
+    }
+
+    .main_grid_2x1 {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .main_grid_x3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-rows: 1fr; */
+    }
+
+    .nav_menu ul li:last-child {
+        margin-right: 0;
+    }
+}
