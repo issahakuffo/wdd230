@@ -77,6 +77,9 @@ nav .social-icons {
     background: #000;
 }
 
+h1{
+    font-size: 1rem;
+}
 
 .hero_img {
     position: relative;
