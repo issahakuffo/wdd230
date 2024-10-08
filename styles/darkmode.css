@@ -1,56 +1,55 @@
-@layer {
-    html.dark {
-        background-color: #181a1b !important;
-        color-scheme: dark !important;
-    }
 
-    .dark iframe {
-        color-scheme: dark !important;
-    }
+html.dark {
+    background-color: #181a1b !important;
+    color-scheme: dark !important;
+}
 
-    html.dark,
-    .dark body {
-        background-color: #181a1b;
-        border-color: #736b5e;
-    }
+.dark iframe {
+    color-scheme: dark !important;
+}
 
-    html.dark,
-    .dark body,
-    .dark .card,
-    .dark h1 {
-        color: #fff !important;
-    }
+html.dark,
+.dark body {
+    background-color: #181a1b;
+    border-color: #736b5e;
+}
 
-    .dark a {
-        color: #3391ff;
-    }
+html.dark,
+.dark body,
+.dark .card,
+.dark h1 {
+    color: #fff !important;
+}
 
-    .dark table {
-        border-color: #545b5e;
-    }
+.dark a {
+    color: #3391ff;
+}
 
-    .dark mark {
-        color: #fff;
-    }
+.dark table {
+    border-color: #545b5e;
+}
 
-    .dark ::placeholder {
-        color: #b2aba1;
-    }
+.dark mark {
+    color: #fff;
+}
 
-    .dark input:-webkit-autofill,
-    .dark textarea:-webkit-autofill,
-    .dark select:-webkit-autofill {
-        background-color: #404400 !important;
-        color: #fff !important;
-    }
+.dark ::placeholder {
+    color: #b2aba1;
+}
 
-    .dark ::selection {
-        background-color: #004daa !important;
-        color: #fff !important;
-    }
+.dark input:-webkit-autofill,
+.dark textarea:-webkit-autofill,
+.dark select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #fff !important;
+}
 
-    .dark ::-moz-selection {
-        background-color: #004daa !important;
-        color: #fff !important;
-    }
+.dark ::selection {
+    background-color: #004daa !important;
+    color: #fff !important;
+}
+
+.dark ::-moz-selection {
+    background-color: #004daa !important;
+    color: #fff !important;
 }
