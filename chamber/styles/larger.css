@@ -25,6 +25,7 @@
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 1fr;
     }
+
     .main_grid_x3 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -40,20 +41,26 @@
         animation: fadeIn 10s forwards;
     }
 
-    .card1{
+    .card1 {
         margin: 1.5rem;
         border: 1px solid #000;
         border-radius: 15px;
     }
 
-    .main-grid{
+    .image-wrapper img:hover {
+        box-shadow: 0 0 50px #333;
+    }
+
+    .main-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .grid_column_1{
+
+    .grid_column_1 {
         grid-column: 1/2;
     }
-    .grid_column_2{
+
+    .grid_column_2 {
         grid-column: 2/3;
     }
 
