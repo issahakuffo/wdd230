@@ -14,11 +14,6 @@
         align-items: center;
     }
 
-    .spotlights {
-        /* display: flex; */
-        /* justify-content: space-between; */
-    }
-
     .main_grid_2x1 {
         margin-top: 50px;
         display: grid;
