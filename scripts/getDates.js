@@ -56,7 +56,7 @@ localStorage.setItem("numVisits-ls", numVisits);
 */
 
 // Select the element where the visit count will be displayed
-const visitsDisplay = document.querySelector(".visits");
+const visitsDisplay = document.querySelector("#visits");
 
 // Get the number of visits from localStorage (or set to 0 if not available)
 let numVisits = Number(localStorage.getItem("numVisits-ls")) || 0;

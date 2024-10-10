@@ -11,6 +11,7 @@ body {
     padding: 0;
 }
 
+
 header {
     background-color: #f6bc8c;
     color: #173826;
@@ -83,6 +84,8 @@ nav .social-icons {
     position: relative;
     background-color: #333;
     background-image: url(../images/hero.jpg), linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
+    opacity: 0;
+    animation: fadeIn 10s forwards;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -148,6 +151,170 @@ img {
     margin-left: auto;
 }
 
+.content-container,
+.content-container1,
+.content-container2,
+.content-container3 {
+    margin: 1rem;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.content-container4 {
+    margin: 1rem;
+    border: 1px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    color: #173826;
+}
+
+.content-container4 h2 {
+    background-color: #f6bc8c;
+}
+
+.content-container4 ul li {
+    list-style: decimal;
+}
+
+.content-container1 {
+    color: #173826;
+}
+
+/* .card img {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    height: 600px;
+} */
+
+/* .photos {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+} */
+
+.text_white {
+    color: #ffffff;
+}
+
+.text_black {
+    color: #000;
+}
+
+
+.text__img {
+    position: relative;
+    background-color: #333;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    height: 400px;
+    padding: 50px;
+    text-align: justify;
+    margin: 50px;
+    text-wrap: balance;
+}
+
+.text__img.bg1 {
+    background-image: url(../images/background-1.webp), linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
+    opacity: 0;
+    animation: fadeIn 10s forwards;
+}
+
+.text__img.bg2 {
+    background-image: url(../images/background-2.webp), linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
+    opacity: 0;
+    animation: fadeIn 10s forwards;
+}
+
+.text__img.bg3 {
+    background-image: url(../images/background-3.webp), linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
+    opacity: 0;
+    animation: fadeIn 10s forwards;
+}
+
+.text__img.bg4 {
+    background-image: url(../images/background-4.webp), linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
+    opacity: 0;
+    animation: fadeIn 10s forwards;
+}
+
+.image-wrapper {
+    margin: 50px 0;
+}
+
+.image-wrapper img {
+    width: calc(100% - 5rem);
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: fadeIn 10s forwards;
+}
+
+
+.text_content {
+    text-align: center;
+}
+
+.text_heading {
+    font-family: "Playpen Sans", cursive;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.text_normal {
+    font-family: "PT Serif", serif;
+    font-size: 1rem;
+}
+
+.card {
+    border: 1px solid #000;
+    border-radius: 15px;
+    margin: 50px;
+}
+
+.card .card_header {
+    background-color: #f6bc8c;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    padding: 10px;
+}
+
+.card .card_body {
+    padding: 10px;
+}
+
+.card .card_body ul li {
+    list-style: none;
+}
+
+/* Lazy loading fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#user_info{
+    text-align: center;
+    font-size: 1.5rem;
+}
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -628,16 +795,12 @@ ul {
 }
 
 main {
-    margin-top: 50px;
-    background-color: #f2e5d3;
     font-family: "PT Serif", serif;
 }
 
-h2,
-h4 {
-    font-family: "Playpen Sans", cursive;
-    ;
-}
+
+
+
 
 div .main_grid {
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
@@ -933,6 +1096,8 @@ a:focus {
         font-size: 40px;
         line-height: 40px;
     }
+
+
 }
 
 @media only screen and (max-width: 479px) {

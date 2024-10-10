@@ -17,15 +17,42 @@ menuButton.addEventListener('click', () => {
     console.log('clicked')
 });
 
-// const menu_button = document.querySelector("#Menu_button");
-// const mobile_nav = document.querySelector("#Mobile_nav");
-// menu_button.addEventListener("click", function () {
-//
-//     if (mobile_nav.className === '') {
-//         mobile_nav.className = 'mobile_menu';
-//         menu_button.innerHTML = '<i class="fa fa-times"></i>';
-//     } else {
-//         mobile_nav.className = '';
-//         menu_button.innerHTML = '<i class="fa fa-bars"></i>';
-//     }
-// })
+
+// Function to display message based on last visit
+function displayVisitMessage() {
+    const visitMessageElement = document.getElementById("visitMessage");
+
+    // Get the current date and time
+    const currentVisit = new Date().getTime();
+
+    // Retrieve the last visit date from localStorage
+    const lastVisit = localStorage.getItem("lastVisit");
+
+    if (!lastVisit) {
+        // First visit: Show welcome message
+        visitMessageElement.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        // Calculate the difference in time (in milliseconds) between the current and last visit
+        const timeDiff = currentVisit - lastVisit;
+
+        // Convert time difference from milliseconds to days (1 day = 86400000 ms)
+        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+        if (daysDiff < 1) {
+            // Less than a day since the last visit
+            visitMessageElement.textContent = "Back so soon! Awesome!";
+        } else if (daysDiff === 1) {
+            // Exactly one day since the last visit
+            visitMessageElement.textContent = "You last visited 1 day ago.";
+        } else {
+            // More than one day since the last visit
+            visitMessageElement.textContent = `You last visited ${daysDiff} days ago.`;
+        }
+    }
+
+    // Store the current visit date in localStorage for future visits
+    localStorage.setItem("lastVisit", currentVisit);
+}
+
+// Call the function when the page loads
+window.onload = displayVisitMessage;
