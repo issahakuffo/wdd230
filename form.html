@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issah Akuffo - WDD 230 - Web Frontend Development</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/darkmode.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playpen+Sans:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="Issah Akuffo - WDD 230 - Web Frontend Development">
+    <meta name="author" content="Issah Akuffo">
+
+    <meta property="og:title" content="City of Accra">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://i0.wp.com/greenviewsresidential.com/wp-content/uploads/2023/02/accra-ghana.jpg?resize=1000%2C562&ssl=1">
+    <meta property="og:url" content="https://issahakuffo.github.io/wdd230/index.html">
+
+</head>
+
+<body>
+    <header class="header_0">
+        <div class="header_1">
+            <img src="images/issah_profile.webp" alt="issah profile picture" width="100" height="130">
+            <div class="author_name">
+                <h2>Issah Akuffo</h2>
+            </div>
+        </div>
+    </header>
+
+    <nav id="Mobile_nav">
+        <!-- <button id="humburgerbtn"><span>&#9776;</span><span>X</span></button> -->
+        <ul>
+            <li><a href="form.html">Home</a></li>
+            <li><a href="https://issahakuffo.github.io/wdd230/chamber/index.html">Chamber</a></li>
+            <li><a href="https://issahakuffo.github.io/wdd230/week01/chamber-site-plan.html">Site Plan</a></li>
+            <li class="active"><a href="form.html">Form</a></li>
+        </ul>
+        <a href="javascript:void(0)" id="Menu_button">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <div><span class="mode_selector">Select mode</span><input class="mode_switcher" id="Mode_switcher" type="checkbox">
+        <p><span id="mode_type">Light</span> mode selected</p>
+    </div>
+    <main>
+        <form method="get" action="record.html" class="user">
+            <fieldset>
+                <legend>Membership form</legend>
+                <label>Username<input type="text" id="username" name="username" required></label>
+                <label>Password<input type="password" id="user-password" name="user-password" required minlength="8"
+                        pattern="[a-zA-Z0-9]+"
+                        title="Password must be at least 8 characters long and can only contain letters and numbers."
+                        oninput="checkMatchingPassword()">
+                </label>
+                <label>Confirm Password<input type="password" id="confirm-password" name="confirm-password" required
+                        oninput="checkMatchingPassword()">
+                </label>
+
+                <div id="password-message" style="color: red;"></div>
+
+                <label>Email<input type="email" id="email" name="email" placeholder="someone@byu.edu" required
+                        pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid BYU email address">
+                </label>
+                <label>Page Rating<input type="range" id="page-rating" name="page-rating" min="1" max="10" step="1"
+                        oninput="updateRatingValue(this.value)">
+                </label>
+
+            </fieldset>
+
+            <button type="submit">Become A Member of The Chamber</button>
+        </form>
+    </main>
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.99590277703!2d-0.19625752525486204!3d5.567620894412904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9a7bc5614509%3A0x956877901c6604e1!2sAccra%20Ghana%20Temple!5e0!3m2!1sen!2sgh!4v1728228701140!5m2!1sen!2sgh"
+            width="600" height="450" style="border:0;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map showing the location of the Accra Ghana Temple">
+        </iframe>
+    </div>
+
+    <footer>
+        <div class="copy">
+            <p>&copy;
+                <span id="year"></span>
+            </p>
+            <p>Issah Akuffo </p>
+            <p>Ghana</p>
+        </div>
+        <div class="lastM">
+            <p>Last modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/formvalidation.js"></script>
+</body>
+
+</html>

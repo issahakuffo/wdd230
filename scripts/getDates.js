@@ -29,32 +29,6 @@ const mode_switcher = document.querySelector("#Mode_switcher");
 const html = document.querySelector("html");
 const mode_type = document.querySelector("#mode_type");
 
-/*mode_switcher.addEventListener("click", function () {
-
-    if (mode_switcher.checked) {
-        // alert('yes checked');
-        html.className = 'dark';
-        mode_type.innerHTML = 'Dark';
-    } else {
-        html.className = '';
-        mode_type.innerHTML = 'Light';
-    }
-})
-
-const visitsDisplay = document.querySelector(".visits");
-let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
-if (numVisits !== 0) {
-	visitsDisplay.textContent = numVisits;
-} else {
-	visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
-}
-
-numVisits++;
-
-// 5️⃣ store the new visit total into localStorage, key=numVisits-ls
-localStorage.setItem("numVisits-ls", numVisits);
-*/
-
 // Select the element where the visit count will be displayed
 const visitsDisplay = document.querySelector("#visits");
 
