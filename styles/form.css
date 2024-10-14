@@ -1,86 +1,89 @@
 :root {
     --primary-color: solid gray;
     /* Color for buttons and highlights */
-    --form-padding:  20px;
+    --form-padding: 20px;
     /* General padding for the form */
     --input-border-radius: 5px;
+}
 
-    /* Common border-radius for inputs */
-    main {
-        padding: 0 2%;
-        min-height: 20rem;
-    }
+/* Common border-radius for inputs */
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
 
-    .user fieldset {
-        margin: 2rem;
-        border: solid gray;
-        border-radius: 6px;
-        padding: 0.5rem 2%;
-    }
+.user fieldset {
+    margin: 2rem;
+    border: solid gray;
+    border-radius: 6px;
+    padding: 0.5rem 2%;
+}
 
-    .user legend {
-        color: rgb(69, 67, 67);
-        padding: 0 0.5rem;
-        font-family: "Playpen Sans", cursive;
-        font-size: 1.5rem;
-    }
+.user legend {
+    color: rgb(69, 67, 67);
+    padding: 0 0.5rem;
+    font-family: "Playpen Sans", cursive;
+    font-size: 1.5rem;
+}
 
-    .user label {
-        display: block;
-        padding-top: 1rem;
-        color: rgb(28, 11, 215);
-        font-family: "PT Serif", serif;
-    }
+.user label {
+    display: block;
+    padding-top: 1rem;
+    color: rgb(28, 11, 215);
+    font-family: "PT Serif", serif;
+}
 
-    .user input[type="text"],
-    .user input[type="password"],
-    .user input[type="email"] {
-        background-color: lightgrey;
-        display: block;
-        border: 1px solid gray;
-        border-radius: 6px;
-        padding: 0.75rem;
-        width: 100%;
-        max-width: 400px;
-        appearance: none;
-    }
+.user input[type="text"],
+.user input[type="password"],
+.user input[type="email"] {
+    background-color: lightgrey;
+    display: block;
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
 
-    .user input[type="range"] {
-        background-color: lightgrey;
-        display: block;
-        border: 1px solid gray;
-        border-radius: 6px;
-        padding: 0.75rem;
-    }
+.user input[type="range"] {
+    background-color: lightgrey;
+    display: block;
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 0.75rem;
+}
 
-    .user input:required {
-        border-bottom: solid 5px red;
-    }
+.user input:required {
+    border-bottom: solid 5px red;
+}
 
-    .user input:required:valid {
-        border-bottom: solid 8px green;
-    }
+.user input:required:valid {
+    border-bottom: solid 8px green;
+}
 
 
-    .user button[type="submit"] {
-        background-color: lightgrey;
-        border: none;
-        color: black;
-        font-size: 1rem;
-        font-family:  "Playpen Sans", cursive;;
-        border-radius: 6px;
-        padding: 0.50rem;
-        width: 96%;
-        max-width: 400px;
-        margin: -1rem 2% 2rem 2%;
-        box-shadow: 1px 1px 4px #6b6a6a;
-    }
+.user button[type="submit"] {
+    background-color: lightgrey;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    font-family: "Playpen Sans", cursive;
+    ;
+    border-radius: 6px;
+    padding: 0.50rem;
+    width: 96%;
+    max-width: 400px;
+    margin: -1rem 2% 2rem 2%;
+    box-shadow: 1px 1px 4px #6b6a6a;
+    cursor: pointer;
+    /* Add cursor pointer for better UX */
+}
 
-    .user button:hover {
-        background-color: lightblue;
-    }
+.user button[type="submit"]:hover {
+    background-color: lightblue;
+}
 
-    footer{
-        bottom: 0px;
-    }
+footer {
+    bottom: 0px;
 }
