@@ -1,3 +1,15 @@
+const rangeSlider = document.getElementById('page-rating');
+const rangeValue = document.getElementById('rangevalue');
+
+// Update the div with the current range value
+rangeSlider.addEventListener('input', function () {
+    rangeValue.textContent = rangeSlider.value;
+});
+
+// Optional: Set the initial value
+rangeValue.textContent = rangeSlider.value;
+
+
 // Check if the password and confirm password match
 function checkMatchingPassword() {
     const password = document.getElementById('user-password').value;
@@ -44,13 +56,3 @@ document.getElementById('user-form').addEventListener('submit', function (event)
 
 
 
-const rangeSlider = document.getElementById('page-rating');
-const rangeValue = document.getElementById('rangevalue');
-
-// Update the div with the current range value
-rangeSlider.addEventListener('input', function () {
-    rangeValue.textContent = rangeSlider.value;
-});
-
-// Optional: Set the initial value
-rangeValue.textContent = rangeSlider.value;
