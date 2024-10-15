@@ -66,24 +66,24 @@ main {
 }
 
 #rangevalue {
-	font-size: 2rem;
+    font-size: 2rem;
     padding-top: 1rem;
-	color:  rgb(28, 11, 215);
+    color: rgb(28, 11, 215);
     font-family: "PT Serif", serif;
 }
 
 #rangevalues {
-	display: flex;
-	margin: 0px 0px 0px 25px;
+    display: flex;
+    margin: 0px 0px 0px 25px;
     width: 100%;
     max-width: 400px;
 }
 
 #rangevalues option {
-	flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
-.ref{
+.ref {
     padding: 0.75rem;
     font-size: 1rem;
     font-family: "PT Serif", serif;
