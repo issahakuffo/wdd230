@@ -73,9 +73,28 @@
                 <label>Email<input type="email" id="email" name="email" placeholder="someone@byu.edu" required
                         pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid BYU email address">
                 </label>
-                <label>Page Rating<input type="range" id="page-rating" name="page-rating" min="1" max="10" step="1"
-                        oninput="updateRatingValue(this.value)">
-                </label>
+
+                <div id="rangevalue">0</div>
+
+                <label for="page-rating">Page Rating:</label>
+                <input type="range" id="page-rating" name="page-rating" min="0" max="10" step="1" list="rangevalues" value="0">
+                <datalist id="rangevalues">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+
+                <div class="ref">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">MDN Input: Range</a>
+                </div>
 
             </fieldset>
 

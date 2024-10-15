@@ -30,6 +30,7 @@ main {
     display: block;
     padding-top: 1rem;
     color: rgb(28, 11, 215);
+    font-size: 1rem;
     font-family: "PT Serif", serif;
 }
 
@@ -51,7 +52,9 @@ main {
     display: block;
     border: 1px solid gray;
     border-radius: 6px;
-    padding: 0.75rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
 }
 
 .user input:required {
@@ -62,6 +65,30 @@ main {
     border-bottom: solid 8px green;
 }
 
+#rangevalue {
+	font-size: 2rem;
+    padding-top: 1rem;
+	color:  rgb(28, 11, 215);
+    font-family: "PT Serif", serif;
+}
+
+#rangevalues {
+	display: flex;
+	margin: 0px 0px 0px 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#rangevalues option {
+	flex: 1 1 auto;
+}
+
+.ref{
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: "PT Serif", serif;
+}
+
 
 .user button[type="submit"] {
     background-color: lightgrey;
@@ -69,7 +96,6 @@ main {
     color: black;
     font-size: 1rem;
     font-family: "Playpen Sans", cursive;
-    ;
     border-radius: 6px;
     padding: 0.50rem;
     width: 96%;
