@@ -11,7 +11,7 @@ body {
     padding: 0;
 }
 
-h1{
+h1 {
     font-size: 2rem;
 }
 
@@ -189,22 +189,6 @@ img {
     color: #173826;
 }
 
-/* .card img {
-    display: block;
-    margin: 10px auto;
-    width: 100%;
-    height: 600px;
-} */
-
-/* .photos {
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 600px;
-} */
-
 .text_white {
     color: #ffffff;
 }
@@ -231,25 +215,25 @@ img {
 .text__img.bg1 {
     background-image: url(../images/background-1.webp), linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
     opacity: 0;
-    animation: fadeIn 10s forwards;
+    animation: fadeIn 5s forwards;
 }
 
 .text__img.bg2 {
     background-image: url(../images/background-2.webp), linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
     opacity: 0;
-    animation: fadeIn 10s forwards;
+    animation: fadeIn 5s forwards;
 }
 
 .text__img.bg3 {
     background-image: url(../images/background-3.webp), linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
     opacity: 0;
-    animation: fadeIn 10s forwards;
+    animation: fadeIn 5s forwards;
 }
 
 .text__img.bg4 {
     background-image: url(../images/background-4.webp), linear-gradient(rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
     opacity: 0;
-    animation: fadeIn 10s forwards;
+    animation: fadeIn 5s forwards;
 }
 
 .image-wrapper {
@@ -263,7 +247,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
-    animation: fadeIn 10s forwards;
+    animation: fadeIn 5s forwards;
 }
 
 .text_content {
@@ -313,10 +297,108 @@ img {
     }
 }
 
-#user_info{
+#user_info {
     text-align: center;
     font-size: 1.5rem;
 }
+
+.mform fieldset {
+    margin: 2rem;
+    border: solid #f2e5d3;
+    border-radius: 6px;
+    padding: 0.5rem 2%;
+}
+
+.mform legend {
+    color: #173826;
+    padding: 0 0.5rem;
+    font-family: "Playpen Sans", cursive;
+    font-size: 1rem;
+}
+
+.mform label {
+    display: block;
+    padding-top: 1rem;
+    color: #173826;
+    font-size: 1rem;
+    font-family: "PT Serif", serif;
+}
+
+.mform input[type="text"],
+.mform input[type="email"],
+.mform input[type="tel"],
+.mform input[type="text"],
+.mform textarea {
+    display: block;
+    border: 1px solid #d28a4e;
+    border-radius: 25px;
+    background-color: lightgrey;
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+.mform input:required:valid {
+    border: solid rgb(11, 169, 11);
+}
+
+.mform button[type="submit"] {
+    background-color: lightgrey;
+    border: none;
+    color: #173826;
+    font-size: 1rem;
+    font-family: "Playpen Sans", cursive;
+    border-radius: 25px;
+    padding: 0.50rem;
+    width: 96%;
+    max-width: 400px;
+    margin: -1rem 2% 2rem 2%;
+    box-shadow: 1px 1px 4px #6b6a6a;
+    cursor: pointer;
+    margin-left: 4rem;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(189, 118, 177);
+}
+
+.benefit-section1,
+.benefit-section2,
+.benefit-section3,
+.benefit-section4 {
+    border: 1px solid #d28a4e;
+    border-radius: 25px;
+    margin: 1rem;
+    background-color: #f2e5d3;
+    color: #173826;
+    text-align: center;
+    font-family: "PT Serif", serif;
+    height: auto;
+    box-shadow: 1px 1px 10px;
+}
+
+
+ul li {
+    list-style: none;
+    margin: 1rem;
+}
+
+h4 {
+    color: #173826;
+    font-family: "Playpen Sans", cursive;
+    text-align: center;
+}
+
+.thank-you-message,
+.next-steps{
+    display: block;
+    margin: 2rem;
+    text-align: center;
+    font-family: "PT Serif", serif;
+    font-size: 1rem;
+}
+
 @media (min-width: 576px) {
     .container {
         max-width: 540px;

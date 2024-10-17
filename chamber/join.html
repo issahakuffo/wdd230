@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tseaddo Chamber of Commerce - Your business partner in growth and community.">
+    <meta property="og:title" content=" Tseaddo of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:url" content="https://issahakuffo.github.io/wdd230/index.html">
+    <meta name="author" content="Issah Akuffo">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Issah Akuffo -WDD- Tseaddo Chamber of Commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header_logo">
+                        <a href="./index.html">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                        <div class="logo_text">
+                            Tseaddo Chamber of Commerce
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__o">
+                        <div class="nav_social">
+                            <a href="https://www.facebook.com/yourpage" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <nav class="nav_menu">
+                            <ul>
+                                <li class="active"><a
+                                        href="https://issahakuffo.github.io/wdd230/chamber/discover.html">Home</a></li>
+                                <li><a href="./about.html">About Us</a></li>
+                                <li><a href="./events.html">Events</a></li>
+                                <li><a href="./join.html">Join Us</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button class="hamburger-menu">MENU <span class="open" id="hamburger-menu_icon"><i
+                                class=" fa fa-bars"></i></span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Image Section -->
+
+    <div class="hero__item hero_img">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero_text">
+                        <h1> welcome to Tseaddo Chamber of Commerce</h1>
+                        <a href="#" class="primary-btn">Become a Member</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-form">
+        <form method="get" action="thankyou.html" class="mform">
+            <fieldset>
+                <legend>Membership Application Form</legend>
+
+                <!-- First Name -->
+                <label>First Name:
+                    <input type="text" id="fname" name="fname" required>
+                </label>
+
+                <!-- Last Name -->
+                <label>Last Name:
+                    <input type="text" id="lname" name="lname" required>
+                </label>
+
+                <!-- Applicant's Title or Position -->
+                <label>Applicant's Title or Position:
+                    <input type="text" id="title" name="title" required pattern="[a-zA-Z\s\-]{7,}"
+                        title="Title must be at least 7 characters long and can only include letters, hyphens, and spaces.">
+                </label>
+                <small>(Only letters, hyphens, and spaces are allowed. Minimum 7 characters)</small>
+
+                <!-- Email Address -->
+                <label>Email Address:
+                    <input type="email" id="email" name="email" placeholder="someone@gmail.com" required
+                        title="Please enter a valid email address">
+                </label><br>
+
+                <!-- Mobile Phone Number -->
+                <label>Mobile Phone Number:
+                    <input type="tel" id="phone-number" name="phone-number" required pattern="[0-9]{10}"
+                        title="Please enter a valid 10-digit phone number (e.g., 1234567890)">
+                </label>
+                <small>(Enter a 10-digit phone number, e.g., 1234567890)</small><br>
+
+                <!-- Business/Organization's Name -->
+                <label>Business/Organization's Name:
+                    <input type="text" id="company-name" name="company-name" required>
+                </label>
+
+                <!-- Membership Level Selection -->
+                <fieldset>
+                    <legend>Select Your Membership Level</legend>
+
+                    <label>
+                        <input type="radio" name="mlevel" value="np" required> NP Membership (Non-Profit - No Fee)
+                    </label>
+
+                    <label>
+                        <input type="radio" name="mlevel" value="bronze"> Bronze Membership
+                    </label>
+
+                    <label>
+                        <input type="radio" name="mlevel" value="silver"> Silver Membership
+                    </label>
+
+                    <label>
+                        <input type="radio" name="mlevel" value="gold"> Gold Membership
+                    </label>
+                </fieldset>
+
+                <label>Business/Organization's Description:
+                    <textarea id="company-description" name="company-description" rows="4" cols="50"
+                        required></textarea>
+                </label>
+
+                <!-- Timestamp (Hidden Field) -->
+                <input type="hidden" id="form-timestamp" name="form-timestamp" value="">
+
+            </fieldset>
+
+            <button type="submit" value="Submit Membership Application">Join Chamber</button>
+
+        </form>
+
+        <!-- NP Membership Benefits -->
+        <div class="benefit-section1">
+            <h4>NP Membership (Non-Profit)</h4>
+            <ul>
+                <li>No membership fee</li>
+                <li>Access to basic networking events</li>
+                <li>Free listing in our directory</li>
+            </ul>
+        </div>
+
+        <!-- Bronze Membership Benefits -->
+        <div class="benefit-section2">
+            <h4>Bronze Membership</h4>
+            <ul>
+                <li>Access to all events</li>
+                <li>5% discount on event tickets</li>
+                <li>Featured listing in our directory</li>
+            </ul>
+        </div>
+
+        <!-- Silver Membership Benefits -->
+        <div class="benefit-section3">
+            <h4>Silver Membership</h4>
+            <ul>
+                <li>Access to all events</li>
+                <li>10% discount on event tickets</li>
+                <li>Featured listing on our website homepage</li>
+                <li>Access to special training programs</li>
+            </ul>
+        </div>
+
+        <!-- Gold Membership Benefits -->
+        <div class="benefit-section4">
+            <h4>Gold Membership</h4>
+            <ul>
+                <li>Access to all events</li>
+                <li>20% discount on event tickets</li>
+                <li>Premium listing on our homepage</li>
+                <li>Exclusive access to VIP events</li>
+                <li>Special spotlight in newsletters</li>
+            </ul>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <p>Chamber of Commerce | Contact us at info@chamber.com</p>
+        <p>Developed by Issah Akuffo for WDD 230. Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

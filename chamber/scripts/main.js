@@ -56,3 +56,18 @@ function displayVisitMessage() {
 
 // Call the function when the page loads
 window.onload = displayVisitMessage;
+
+window.onload = function() {
+    const timestampField = document.getElementById('form-timestamp');
+    const now = new Date();
+
+    // Format the date and time as YYYY-MM-DD HH:MM:SS
+    const formattedTimestamp = now.getFullYear() + "-" +
+        String(now.getMonth() + 1).padStart(2, '0') + "-" +
+        String(now.getDate()).padStart(2, '0') + " " +
+        String(now.getHours()).padStart(2, '0') + ":" +
+        String(now.getMinutes()).padStart(2, '0') + ":" +
+        String(now.getSeconds()).padStart(2, '0');
+
+    timestampField.value = formattedTimestamp;
+};
