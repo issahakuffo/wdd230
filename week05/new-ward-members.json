@@ -1,0 +1,28 @@
+{
+    "familyName": "Jackson",
+    "moveIndate": "15-10-2024",
+    "numberOfpeople": "4",
+    "visitedBybishopric": "true",
+    "familyMemebrs": [
+        {
+            "name": "Michael Jackson",
+            "gender": "Male",
+            "dateOfbirth": "22-04-1994"
+        },
+        {
+            "name": "Janet Jackson",
+            "gender": "Female",
+            "dateOfbirth": "15-10-1997"
+        },
+        {
+            "name": "Broody Jackson",
+            "gender": "Male",
+            "dateOfbirth": "04-001-2000"
+        },
+        {
+            "name": "Angela Jackson",
+            "gender": "Female",
+            "dateOfbirth": "27-07-2004"
+        }
+    ]
+}
