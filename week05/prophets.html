@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prophets</title>
+    <link rel="stylesheet" href="styles/prophets.css">
+    <meta name="description" content="Prophets - WDD 230 - Web Frontend Development">
+    <meta name="author" content="Issah Akuffo">
+</head>
+
+<body>
+    <header>
+        <h1>Latter-day Prophets</h1>
+    </header>
+    <div id="cards" class="grid-container"></div>
+    <script>
+        // Define the URL for the JSON data
+        const url = "https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json";
+
+        // Select the #cards container from the DOM
+        const cardsContainer = document.querySelector('#cards');
+
+        // Function to fetch prophet data from the URL
+        async function getProphetData() {
+            try {
+                const response = await fetch(url); // Fetch data from the URL
+                const data = await response.json(); // Parse the JSON data
+                displayProphets(data.prophets); // Call displayProphets function to render the cards
+            } catch (error) {
+                console.error("Error fetching prophet data:", error); // Log error if fetch fails
+            }
+        }
+        const displayProphets = (prophets) => {
+            prophets.forEach((prophet) => {
+                // Create elements to add to the div.cards element
+                let card = document.createElement('section');
+                let fullName = document.createElement('h2'); // fill in the blank
+                let portrait = document.createElement('img');
+
+                // Build the h2 content out to show the prophet's full name
+                fullName.textContent = `${prophet.name} ${prophet.lastname}`; // fill in the blank
+                // Build the image portrait by setting all the relevant attributes
+                portrait.setAttribute('src', prophet.imageurl);
+                portrait.setAttribute('alt', `Portrait of${prophet.name} ${prophet.lastname}`); // fill in the blank
+                portrait.setAttribute('loading', 'lazy');
+                portrait.setAttribute('width', '340');
+                portrait.setAttribute('height', '440');
+
+                // Append the section(card) with the created elements
+                card.appendChild(fullName); //fill in the blank
+                card.appendChild(portrait);
+
+                cards.appendChild(card);
+            }); // end of arrow function and forEach loop
+        }
+        getProphetData();
+    </script>
+    <footer>
+        Issah Akuffo | Latter-day Prophets
+    </footer>
+    <script src="scripts/prophets.js"></script>
+</body>
+
+</html>
