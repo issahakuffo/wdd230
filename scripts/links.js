@@ -1,14 +1,14 @@
 const baseURL = 'https://issahakuffo.github.io/wdd230/';
-const linksURL = 'https://issahakuffo.github.io/wdd230/data/links.json%22';
+const linksURL = 'https://issahakuffo.github.io/wdd230/data/links.json'; // Fixed quote error
 
 async function getLinks() {
     const response = await fetch(linksURL);
     const data = await response.json();
     displayLinks(data);
-  }
-  
-  function displayLinks(weeks) {
-    const linksList = document.querySelector('links-container'); // Select the list in the card body
+}
+
+function displayLinks(weeks) {
+    const linksList = document.querySelector('#links-container'); // Corrected ID selector
 
     // Clear existing links in the list (if needed)
     linksList.innerHTML = '';
@@ -33,4 +33,5 @@ async function getLinks() {
         linksList.appendChild(weekItem); // Add the week item to the links list
     });
 }
-  getLinks();
+
+getLinks();
