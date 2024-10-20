@@ -22,12 +22,16 @@ async function apiFetch() {
     }
 }
 
-function displayResults(data) {
-    currentTemp.innerHTML = `${data.main.temp}&deg;F`; // Fill in: data.main.temp
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}@2x.png`; // Fill in: data.weather[0].icon
-    let desc = data.weather[0].description; // Fill in: data.weather[0].description
-    weatherIcon.setAttribute('src', iconsrc); // Fill in: 'src', iconsrc
-    weatherIcon.setAttribute('alt', desc); // Fill in: 'alt', desc
-    captionDesc.textContent = `${desc}`; // Fill in: `${desc}`
+function  displayResults(weatherData) {
+    currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}&deg;F </strong>`;
+  
+    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+    const desc = weatherData.weather[0].description;
+    const capitalizedDesc = desc.charAt(0).toUpperCase() + desc.slice(1);
+
+  
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', desc);
+    captionDesc.textContent = capitalizedDesc;extContent = `${desc}`; // Fill in: `${desc}`
 }
 apiFetch();

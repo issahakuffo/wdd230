@@ -1,0 +1,13 @@
+body{
+    display: block;
+}
+
+main,h1,footer{
+    text-align: center;
+    margin: 2rem;
+
+}
+
+main figure, p{
+    font-size: 1rem;
+}
