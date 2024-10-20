@@ -1,36 +1,30 @@
 const baseURL = 'https://issahakuffo.github.io/wdd230/';
-const linksURL = 'https://issahakuffo.github.io/wdd230/data/links.json'; // Fixed quote error
+const linksURL = 'https://issahakuffo.github.io/wdd230/data/links.json';
 
 async function getLinks() {
     const response = await fetch(linksURL);
     const data = await response.json();
     displayLinks(data);
-}
+  }
 
-function displayLinks(weeks) {
-    const linksList = document.querySelector('#links-container'); // Corrected ID selector
-
-    // Clear existing links in the list (if needed)
-    linksList.innerHTML = '';
+  function displayLinks(weeks) {
+    const linksContainer = document.getElementById("links-container");
+    linksContainer.innerHTML = ""; // Clear existing content
 
     weeks.forEach(week => {
-        // Create a list item for the week
-        const weekItem = document.createElement('li');
-        weekItem.textContent = week.week + ': '; // Set the week text
+        const weekItem = document.createElement("li");
+        weekItem.textContent = week.week + ": "; // Week number
 
-        // Create links for the week's activities
         week.links.forEach(link => {
-            const anchor = document.createElement('a');
-            anchor.href = link.url; // Set the URL for the anchor
-            anchor.textContent = link.title; // Set the text for the anchor
-            anchor.target = '_blank'; // Optional: open links in a new tab
-            weekItem.appendChild(anchor); // Add the anchor to the week item
-
-            // Add a space between links for readability
-            weekItem.appendChild(document.createTextNode(' '));
+            const anchor = document.createElement("a");
+            anchor.href = links.url;
+            anchor.textContent = links.title;
+            anchor.target = "_blank"; // Open link in a new tab
+            anchor.style.marginRight = "10px"; // Add some space between links
+            weekItem.appendChild(anchor); // Add link to week item
         });
 
-        linksList.appendChild(weekItem); // Add the week item to the links list
+        linksContainer.appendChild(weekItem); // Add week item to links container
     });
 }
 
