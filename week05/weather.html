@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prophets</title>
+    <link rel="stylesheet" href="styles/prophets.css">
+    <meta name="description" content="Weather - WDD 230 - Web Frontend Development">
+    <meta name="author" content="Issah Akuffo">
+</head>
+
+<body>
+    <h1>OpenWeatherMap.org API Test</h1>
+    <main>
+      <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
+      <figure>
+        <img id="weather-icon" src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+</main>
+    <script>
+            // select HTML elements in the document
+        const currentTemp = document.querySelector('#current-temp');
+        const weatherIcon = document.querySelector('#weather-icon');
+        const captionDesc = document.querySelector('figcaption');
+
+        const url = 'https://api.openweathermap.org/data/2.5/weather?lat=49.749992&lon=6.637143&units=imperial&appid=0da3a1a52462ed5fa5b20d9b03b45039';
+        // Declare a const variable named "url" and assign it a valid URL string
+
+
+        async function apiFetch() {
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log(data); // testing only
+                    displayResults(data); 
+                } else {
+                    throw Error(await response.text());
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        function displayResults(data) {
+            currentTemp.innerHTML = `${data.main.temp}&deg;F`; // Fill in: data.main.temp
+            const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}@2x.png`; // Fill in: data.weather[0].icon
+            let desc = data.weather[0].description; // Fill in: data.weather[0].description
+            weatherIcon.setAttribute('src', iconsrc); // Fill in: 'src', iconsrc
+            weatherIcon.setAttribute('alt', desc); // Fill in: 'alt', desc
+            captionDesc.textContent = `${desc}`; // Fill in: `${desc}`
+        }
+        apiFetch();
+    </script>
+    <footer>
+      Issah Akuffo | OpenWeatherMap.org | CC BY-SA 4.0
+    </footer>
+    <script src="scripts/weather.js"></script>
+</body>
+</html>
