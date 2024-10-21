@@ -5,7 +5,7 @@
             "address": "12 Alpha Street, Tseaddo, Accra",
             "phone": "+233 24 555 1234",
             "website": "https://brightsolutions.com",
-            "image": "bright-solutions.webp",
+            "image": "images/bright-solutions.webp",
             "membershipLevel": "Gold"
         },
         {
@@ -13,7 +13,7 @@
             "address": "25 Aqua Way, Tseaddo, Accra",
             "phone": "+233 26 777 3456",
             "website": "https://clearwatertech.com",
-            "image": "clear-watertech.webp",
+            "image": "images/clear-watertech.webp",
             "membershipLevel": "Silver"
         },
         {
@@ -21,7 +21,7 @@
             "address": "42 Oak Lane, Tseaddo, Accra",
             "phone": "+233 20 888 7890",
             "website": "https://ecobuildersghana.com",
-            "image": "eco-build.webp",
+            "image": "images/eco-build.webp",
             "membershipLevel": "Bronze"
         },
         {
@@ -29,7 +29,7 @@
             "address": "67 Harvest Road, Tseaddo, Accra",
             "phone": "+233 24 123 4567",
             "website": "https://tseaddoagrohub.com",
-            "image": "agro-hub.webp", 
+            "image": "images/agro-hub.webp", 
             "membershipLevel": "Gold"
         },
         {
@@ -37,7 +37,7 @@
             "address": "58 Tech Lane, Tseaddo, Accra",
             "phone": "+233 27 555 6789",
             "website": "https://accradigital.com",
-            "image": "accra-digital.webp",
+            "image": "images/accra-digital.webp",
             "membershipLevel": "Silver"
         },
         {
@@ -45,7 +45,7 @@
             "address": "22 Palm Grove, Tseaddo, Accra",
             "phone": "+233 20 333 5678",
             "website": "https://tropicalventures.com",
-            "image": "tropical.webp",
+            "image": "images/tropical.webp",
             "membershipLevel": "Bronze"
         },
         {
@@ -53,7 +53,7 @@
             "address": "90 Discovery Avenue, Tseaddo, Accra",
             "phone": "+233 24 777 8901",
             "website": "https://innovateaccra.com",
-            "image": "innovate-accra.webp",
+            "image": "images/innovate-accra.webp",
             "membershipLevel": "Gold"
         }
     ]
