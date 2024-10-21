@@ -1,4 +1,4 @@
-const url = 'https://issahakuffo.github.io/wdd230/chamber/data/members.json';
+const url = 'data/members.json';
 const list = document.querySelector('#list');
 const table = document.querySelector('.table');
 const grid = document.querySelector('#grid');
@@ -17,7 +17,7 @@ async function getData(url) {
             displayCards(business);
         });
 
-        list.addEventListener('click', () =>{
+        list.addEventListener('click', () => {
             table.innerHTML = '';
             cards.innerHTML = '';
             business.forEach(business => {
@@ -46,9 +46,9 @@ function displayCards(business) {
     card.appendChild(image);
 
     // Business Name
-    let h2 = document.createElement('h2');
-    h2.textContent = business.name;
-    card.appendChild(h2);
+    let h3 = document.createElement('h3');
+    h3.textContent = business.name;
+    card.appendChild(h3);
 
     // Business Address
     let address = document.createElement('p');
@@ -84,7 +84,7 @@ function displayTable(business) {
     name.textContent = business.name;
     tableRow.appendChild(name);
 
- 
+
     // Business Address
     let address = document.createElement('td');
     address.textContent = business.address;
