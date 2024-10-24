@@ -120,3 +120,43 @@ function displayTable(business) {
 
     document.querySelector('table').appendChild(tableRow);
 }
+
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('figcaption');
+
+const apiKey = '0da3a1a52462ed5fa5b20d9b03b45039'; // OpenWeatherMap API key
+const lat = '5.56060'; // Latitude for Accra, Ghana
+const lon = '-0.20981'; // Longitude for Accra, Ghana
+
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+
+
+async function apiFetch() {
+    try {
+        const response = await fetch(weatherUrl);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data); // testing only
+            displayResults(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function displayResults(weatherData) {
+    currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}&deg;F </strong>`;
+
+    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+    const desc = weatherData.weather[0].description;
+    const capitalizedDesc = desc.charAt(0).toUpperCase() + desc.slice(1);
+
+
+    weatherIcon.setAttribute('src', iconsrc);
+    weatherIcon.setAttribute('alt', desc);
+    captionDesc.textContent = capitalizedDesc; extContent = `${desc}`; // Fill in: `${desc}`
+}
+apiFetch();

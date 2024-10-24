@@ -435,6 +435,16 @@ h4 {
     height: 250px;
   }
   
+  .home-p .cards img {
+    width: 250px;
+    height: 230px;
+  }
+  
+  .weather{
+    display: block;
+    text-align: center;
+  }
+  
   .directory a {
     text-decoration: none;
     color: #14213d;
@@ -469,7 +479,6 @@ h4 {
     background-color: #ececec;
     cursor: pointer;
   }
-  
   .icons img {
     width: 50px;
   }
