@@ -1,0 +1,34 @@
+{
+    "business": [
+        {
+            "name": "Quiklick Consultancy",
+            "description": "Empower Your Business",
+            "details": "Quiklick Consultancy provides customized consulting services in strategy, operations, market research, and training. Their expert team is focused on delivering results, helping businesses tackle challenges and achieve their goals.",
+            "phone": "+233 123 456 789",
+            "email": "info@quiklickconsultancy.com",
+            "website": "quiklickconsultancy.com",
+            "image": "images/quiklick_consultancy.jpg",
+            "membershipLevel": "Silver"
+        },
+        {
+            "name": "Hassi Logistics",
+            "description": "Your Trusted Supply Chain Partner",
+            "details": "Hassi Logistics offers reliable logistics services, including freight forwarding, warehousing, and distribution, to ensure timely and safe delivery of goods. With a focus on efficiency and reliability, they are committed to streamlining your supply chain and becoming your go-to logistics partner.",
+            "phone": "+233 987 654 321",
+            "email": "info@hassilogistics.com",
+            "website": "hassilogistics.com",
+            "image": "images/Hassi_logistics.jpg",
+            "membershipLevel": "Gold"
+        },
+        {
+            "name": "Wings Platter",
+            "description": "Taste the Best African Dishes in Tseaddo",
+            "details": "Wings Platter serves a variety of flavorful chicken wings in a cozy, casual dining setting. With a fusion of local and international tastes, it's the perfect spot for family and friends to enjoy a delicious meal.",
+            "location": "Tseaddo",
+            "phone": "+233 555 123 456",
+            "website": "wingsplatter.com",
+            "image": "images/wingsplatter.jpg",
+            "membershipLevel": "Gold"
+        }
+    ]
+}
