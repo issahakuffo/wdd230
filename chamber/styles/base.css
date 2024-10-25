@@ -15,6 +15,24 @@ h1 {
     font-size: 2rem;
 }
 
+#banner {
+    display: none; /* Initially hidden */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px; /* Some padding */
+    text-align: center; /* Centered text */
+    position: relative; /* Positioning context for close button */
+    z-index: 19;
+}
+.close-btn {
+    position: absolute; /* Position relative to banner */
+    top: 10px; /* Positioning */
+    right: 15px; /* Positioning */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: bold; /* Bold text */
+    color: white; /* White text */
+}
+
 header {
     background-color: #f6bc8c;
     color: #173826;

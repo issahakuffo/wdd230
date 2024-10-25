@@ -4,6 +4,8 @@ const table = document.querySelector('.table');
 const grid = document.querySelector('#grid');
 const cards = document.querySelector('.cards');
 const displayItems = document.querySelector('.displayItems');
+const three_day_forecast = document.querySelector('#three_day_forecast');
+
 
 
 async function getData(url) {
@@ -56,11 +58,11 @@ function displayCards(business) {
     description.textContent = business.description;
     card.appendChild(description);
 
-     // Business Details
-     let details = document.createElement('p');
-     details.textContent = business.details;
-     card.appendChild(details);
- 
+    // Business Details
+    let details = document.createElement('p');
+    details.textContent = business.details;
+    card.appendChild(details);
+
 
     // Business Phone
     let phone = document.createElement('p');
@@ -97,10 +99,10 @@ function displayTable(business) {
     description.textContent = business.description;
     tableRow.appendChild(description);
 
-     // Business details
-     let details = document.createElement('td');
-     details.textContent = business.details;
-     tableRow.appendChild(details);
+    // Business details
+    let details = document.createElement('td');
+    details.textContent = business.details;
+    tableRow.appendChild(details);
 
     // Business Phone
     let phone = document.createElement('td');
@@ -137,7 +139,7 @@ async function apiFetch() {
         const response = await fetch(weatherUrl);
         if (response.ok) {
             const data = await response.json();
-            console.log(data); // testing only
+            console.log(data); // testing only, comment after testing for security reasons
             displayResults(data);
         } else {
             throw Error(await response.text());
@@ -159,4 +161,49 @@ function displayResults(weatherData) {
     weatherIcon.setAttribute('alt', desc);
     captionDesc.textContent = capitalizedDesc; extContent = `${desc}`; // Fill in: `${desc}`
 }
+
+async function getThreeDayForecast(city, apiKey, lon, lat) {
+
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=3&units=imperial&appid=${apiKey}`;
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        let forecastHTML = `<h2>Forecast for ${city}:</h2><ul>`;
+
+        data.list.forEach((forecast) => {
+            const date = new Date(forecast.dt * 1000);
+            const temp = forecast.main.temp;
+            forecastHTML += `<li>${date.toLocaleDateString()}: ${temp} °C</li>`;
+        });
+
+        forecastHTML += '</ul>';
+        three_day_forecast.innerHTML = forecastHTML; // Display the results
+    } catch (error) {
+        console.error('Error fetching the weather data:', error);
+    }
+
+
+
+}
+function showBanner() {
+    const today = new Date();
+    const day = today.getDay(); // 0: Sunday, 1: Monday, ..., 6: Saturday
+
+    console.log(day);
+
+    // Check if today is Monday (1), Tuesday (2), or Wednesday (3)
+    if (day >= 1 && day <= 3) {
+        document.querySelector('#banner').style.display = 'block';
+    }
+
+}
+function closeBanner() {
+    document.querySelector('#banner').style.display = 'none';
+}
+getThreeDayForecast('accra', apiKey, lon, lat);
 apiFetch();
+window.onload = showBanner;
