@@ -20,6 +20,10 @@
 </head>
 
 <body>
+    <div id="banner">
+        <span class="close-btn" onclick="closeBanner()">✖</span>
+        Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.!
+    </div>
     <header class="header">
         <div class="overlay"></div>
         <div class="container">
@@ -97,6 +101,7 @@
                     <img src="#" alt="#" id="weather-icon">
                     <figcaption id="icon-desc">Placeholder Icon Description</figcaption>
                 </figure>
+                <span id="three_day_forecast"></span>
             </div>
         </section>
         <!-- Spotlight Companies -->
@@ -106,7 +111,7 @@
                 <button id="grid">
                     <img src="images/grid.svg" alt="grid">
                 </button>
-                <button id="list">
+                <button id="list" style="display: none;">
                     <img src="images/list.svg" alt="list">
                 </button>
             </div>
