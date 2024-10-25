@@ -391,13 +391,14 @@ h4 {
 }
 
 .thank-you-message,
-.next-steps{
+.next-steps {
     display: block;
     margin: 2rem;
     text-align: center;
     font-family: "PT Serif", serif;
     font-size: 1rem;
-    color:  #173826;;
+    color: #173826;
+    ;
 }
 
 /*------Discovery----*/
@@ -405,16 +406,17 @@ h4 {
 .directory #content {
     width: 100%;
     margin: 0 auto;
-  }
-  
-  .cards {
+}
+
+.cards {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
-    
-  }
-  .cards section {
+
+}
+
+.cards section {
     border: 2px solid #173826;
     border-radius: 15px;
     background-color: #f2e5d3;
@@ -423,88 +425,94 @@ h4 {
     width: 300px;
     margin: 20px;
     box-shadow: 1px 1px 10px;
-  }
-  
-  .directory h3 {
-    color:#173826;
+}
+
+.directory h3 {
+    color: #173826;
     text-align: center;
-    font-family: "PT Serif", serif;;
-  }
-  .directory .cards img {
+    font-family: "PT Serif", serif;
+    ;
+}
+
+.directory .cards img {
     width: 250px;
     height: 250px;
-  }
-  
-  .home-p .cards img {
+}
+
+.home-p .cards img {
     width: 250px;
     height: 230px;
-  }
-  
-  .weather{
+}
+
+.weather {
     display: block;
     text-align: center;
-  }
-  
-  .directory a {
+}
+
+.directory a {
     text-decoration: none;
     color: #14213d;
     font-size: 1.9em;
     font-family: "Playpen Sans", cursive;
-  }
-  .directory a:hover{
+}
+
+.directory a:hover {
     color: #3300ff;
-  }
-  
-  .directory p:first-of-type {
+}
+
+.directory p:first-of-type {
     font-family: "Playpen Sans", cursive;
     font-size: 1.95em;
-  }
-  
-  .directory .icons{
+}
+
+.directory .icons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 10px;
 
-  }
-  
-  .icons button {
+}
+
+.icons button {
     background-color: #d28a4e;
     border: none;
-    box-shadow: 1px 1px 10px;   
-  }
-  
-  .icons button:hover {
+    box-shadow: 1px 1px 10px;
+}
+
+.icons button:hover {
     background-color: #ececec;
     cursor: pointer;
-  }
-  .icons img {
+}
+
+.icons img {
     width: 50px;
-  }
-  
-  .directory table {
+}
+
+.directory table {
     width: 90%;
     border-collapse: collapse;
     margin: auto;
     overflow: hidden;
-  }
-  
-  .directory td {
-  
+}
+
+.directory td {
+
     padding: 10px;
-  }
-  
-  tr:nth-child(odd) {
+}
+
+tr:nth-child(odd) {
     background-color: #f2e5d3;
-  }
-  
-  tr td {
+}
+
+tr td {
     display: block;
-  }
-  .card section p {
+}
+
+.card section p {
     font-size: .2rem;
-  }
+}
+
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
